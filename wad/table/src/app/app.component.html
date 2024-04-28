@@ -1,0 +1,14 @@
+<p style="padding: 10px;">Home Page</p>
+<div *ngIf="!input_bool; else inputdone" class="inputt">
+  <input type="text" id="tableinfo" #tableinfo placeholder="Enter format string">
+  <input type = button (click)="maketable(tableinfo.value)" value="Submit"> 
+</div>
+<ng-template #inputdone>
+  <table class="table table-bordered table-striped my-300 ">
+    <tr *ngFor="let row of matrix">
+      <td *ngFor="let col of row">
+        {{col}}
+      </td>
+    </tr>
+  </table>
+</ng-template>
