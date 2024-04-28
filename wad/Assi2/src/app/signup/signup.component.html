@@ -1,0 +1,5 @@
+<p>signup works!</p>
+<input type="mail" placeholder="Enter your email" #email/>
+<input type="text" placeholder="Enter your username" #username/>
+<input type="password" placeholder="Enter your password" #password/>
+<input type="button" value="Sign Up" (click)="signup(email.value, username.value ,password.value)"/>

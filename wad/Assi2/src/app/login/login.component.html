@@ -1,0 +1,14 @@
+<p>login works!</p>
+
+<p *ngIf="!login_bool; else loggedin">
+<input type="text" #username placeholder="Enter username">
+<input type="password" #password placeholder="Enter password">
+<input type="button"  (click)="login(username.value, password.value)" value="login">
+</p>
+<ng-template #loggedin>
+    <div>
+        <p>Hi {{user_list[user_index]['name']}}</p>
+        <p>your Email is {{user_list[user_index]['email']}}</p>
+    </div>
+    <input type="button" (click)="logout()" value="logout">
+</ng-template>
