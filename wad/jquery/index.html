@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+</head>
+<body>
+    <div data-role="page" id="1st">
+        <div data-role="header" data-theme="b">
+            <div data-role="navbar" style="text-align: center; font-size: 30px;">
+                Welcome to jQuery Mobile
+            </div>
+        </div>
+        <div data-role="header" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href = "#1st">one</a></li>
+                    <li><a href = "#2nd">two</a></li>
+                    <li><a href = "eg.html">three</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <center>
+            <h1 style="color: red;" >Heading1</h1>
+        </center>
+
+        <div data-role="content">
+            <div data-role="row">
+                <img class="imggrid" src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" style="width:104px;height:142px;">
+                <img class="imggrid" src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" style="width:104px;height:142px;">
+                <img class="imggrid" src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" style="width:104px;height:142px;">
+    
+            </div>
+        </div>
+
+        <center>
+            <div data-role="footer">
+                <a href = "#">one</a><br>
+                <a href = "#2nd">two</a><br>
+                <a href = "#">three</a><br>
+                <p>Some para here</p>
+            </div>
+        </center>
+
+    </div>
+    <div data-role="page" id="2nd">
+        <div data-role="header" data-theme="b">
+            <div data-role="navbar" style="text-align: center; font-size: 30px;">
+                Welcome to jQuery Mobile
+            </div>
+        </div>
+        <div data-role="header" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href = "#1st">one</a></li>
+                    <li><a href = "#2nd">two</a></li>
+                    <li><a href = "#">three</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <button id = "btn1">Click me1</button>
+            <div id="div1" style="display: none;">
+                <p>This is div1</p>
+            </div>
+        </div>
+        <div>
+            <button id = "btn2">Click me2</button>
+            <div id="div2">
+                <p>This is div2</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                $('#div1').toggle();
+            });
+        })
+        $(document).ready(function(){
+            $('#btn2').click(function(){
+                $('#div2').toggle();
+            });
+        })
+    </script>
+
+    
+</body>
+</html>
